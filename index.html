@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-title" content="Hyundai AutoEver" />
+  <title>현대오토에버</title>
+  <meta name="description" content="현대오토에버 웹사이트">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="xeicon/xeicon.min.css" />
+  <link rel="stylesheet" href="css/web-font.css" />
+  <link rel="stylesheet" href="css/style-pc.css" media="screen and (min-width: 1024.0px)" />
+  <link rel="stylesheet" href="css/style-m.css" media="screen and (max-width: 1023.9px)" />
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body class="main">
+  <div id="wrapper">
+    <a href="#main" id="skip-nav">본문 바로가기</a>
+    <header id="header" class="small">
+      <div class="box">
+        <h1><a href="#">
+          <img src="img/logo.png" class="default" alt="Hyundai AutoEver" />
+          <img alt="Hyundai AutoEver" src="img/logo-wht.png" class="white" />
+        </a></h1>
+        <nav id="gnb">
+          <a href="#" class="close mobile"><span>메뉴 열기/닫기</span></a>
+          <ul class="lang-menu mobile">
+            <li class="on"><a href="#">KOR</a></li>
+            <li><a href="#">ENG</a></li>
+          </ul>
+          <ul class="gnb">
+            <li data-menu="business">
+              <a href="#">BUSINESS AREA</a>
+              <div class="box">
+                <ul class="sub">
+                  <li data-menu="vehicle"><a href="#">Vehicle IT</a>
+                    <ul>
+                      <li><a href="#">차량 SW 플랫폼</a></li>
+                      <li><a href="#">SW 개발 플랫폼</a></li>
+                      <li><a href="#">차량 연동 서비스</a></li>
+                      <li><a href="#">OTA</a></li>
+                      <li><a href="#">내비게이션</a></li>
+                      <li><a href="#">정밀지도</a></li>
+                    </ul>
+                  </li>
+                  <li data-menu="dt"><a href="#">DT Services</a>
+                    <ul>
+                      <li><a href="#">스마트 팩토리</a></li>
+                      <li><a href="#">모빌리티 서비스</a></li>
+                      <li><a href="#">스마트 시티</a></li>
+                      <li><a href="#">앤터프라이즈 IT</a></li>
+                    </ul>
+                  </li>
+                  <li data-menu="core"><a href="#">Core Technology</a>
+                    <ul>
+                      <li><a href="#">카클라우드</a></li>
+                      <li><a href="#">빅데이터</a></li>
+                      <li><a href="#">인공지능</a></li>
+                      <li><a href="#">보안</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li data-menu="about">
+              <a href="page/about/company-intro.html">ABOUT US</a>
+              <div class="box">
+                <ul class="sub">
+                  <li data-menu="company"><a href="page/about/company-intro.html">회사소개</a>
+                    <ul>
+                      <li><a href="#">기업소개</a></li>
+                      <li><a href="#">CEO</a></li>
+                      <li><a href="#">연혁</a></li>
+                    </ul>
+                  </li>
+                  <li data-menu="workplace"><a href="#">사업장</a>
+                    <ul>
+                      <li><a href="#">국내 사업장</a></li>
+                      <li><a href="#">해외 사업장</a></li>
+                    </ul>
+                  </li>
+                  <li data-menu="pr"><a href="#">PR 센터</a>
+                    <ul>
+                      <li><a href="#">뉴스</a></li>
+                      <li><a href="#">블로그</a></li>
+                      <li><a href="#">뉴스레터 구독</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li data-menu="ir">
+              <a href="#">IR</a>
+              <div class="box">
+                <ul class="sub">
+                  <li data-menu="summary"><a href="#">개요</a></li>
+                  <li data-menu="management-info"><a href="#">경영정보</a>
+                    <ul>
+                      <li><a href="#">기업지배구조헌장</a></li>
+                      <li><a href="#">이사회</a></li>
+                      <li><a href="#">감사기구</a></li>
+                      <li><a href="#">정관</a></li>
+                    </ul>
+                  </li>
+                  <li data-menu="finance-info"><a href="#">재무정보</a>
+                    <ul>
+                      <li><a href="#">재무상태표</a></li>
+                      <li><a href="#">손익계산서</a></li>
+                      <li><a href="#">감사/사업/영업 보고서</a></li>
+                      <li><a href="#">신용등급</a></li>
+                    </ul>
+                  </li>
+                  <li data-menu="stocks-info"><a href="#">주가정보</a>
+                    <ul>
+                      <li><a href="#">실시간 주가정보</a></li>
+                      <li><a href="#">주식 및 배당현황</a></li>
+                      <li><a href="#">주주현황</a></li>
+                    </ul>
+                  </li>
+                  <li data-menu="ir-info"><a href="#">IR 정보</a>
+                    <ul>
+                      <li><a href="#">IR 일정</a></li>
+                      <li><a href="#">경영실적발표</a></li>
+                      <li><a href="#">증권사리포트</a></li>
+                      <li><a href="#">IR 뉴스</a></li>
+                      <li><a href="#">IR 문의</a></li>
+                    </ul>
+                  </li>
+                  <li data-menu="public-notice"><a href="#">공시정보</a>
+                    <ul>
+                      <li><a href="#">공시</a></li>
+                      <li><a href="#">전자공고</a></li>
+                      <li><a href="#">공시정보관리규졍</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li data-menu="sustainability">
+              <a href="#">SUSTAINABILITY</a>
+              <div class="box">
+                <ul class="sub">
+                  <li data-menu="together"><a href="#">동반성장</a>
+                    <ul>
+                      <li><a href="#">동반성장 개요</a></li>
+                      <li><a href="#">공정한 거래환경</a></li>
+                      <li><a href="#">협력사 경쟁력 강화지원</a></li>
+                      <li><a href="#">동반성장 환경 조성</a></li>
+                      <li><a href="#">협력사 행동규범</a></li>
+                    </ul>
+                  </li>
+                  <li data-menu="fair-trade"><a href="#">공정거래</a>
+                    <ul>
+                      <li><a href="#">최고 경영자 의지 선포문</a></li>
+                      <li><a href="#">자율준수 프로그램 운영현황</a></li>
+                      <li><a href="#">Compliance 관련 활동</a></li>
+                      <li><a href="#">불공정거래 행위 제보</a></li>
+                    </ul>
+                  </li>
+                  <li data-menu="ethics"><a href="#">윤리 · 인권헌장</a>
+                    <ul>
+                      <li><a href="#">윤리헌장</a></li>
+                      <li><a href="#">인권헌장</a></li>
+                    </ul>
+                  </li>
+                  <li data-menu="social-contribution"><a href="#">사회공헌</a>
+                    <ul>
+                      <li><a href="#">사회공헌 소개</a></li>
+                      <li><a href="#">사회공헌 활동</a></li>
+                    </ul>
+                  </li>
+                  <li data-menu="sustainable-management"><a href="#">지속가능경영</a>
+                    <ul>
+                      <li><a href="#">지속가능경영</a></li>
+                      <li><a href="#">환경경영</a></li>
+                      <li><a href="#">안전보건경영</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li data-menu="careers">
+              <a href="#">CAREERS</a>
+              <div class="box">
+                <ul class="sub">
+                  <li data-menu="talent"><a href="#">인재상</a></li>
+                  <li data-menu="hr-system"><a href="#">인사제도</a></li>
+                  <li data-menu="job-intro"><a href="#">직무소개</a></li>
+                  <li data-menu="recruit"><a href="#">지원하기</a></li>
+                </ul>
+              </div>
+            </li>
+            <li data-menu="utility" class="mobile">
+              <a href="#">UTILITY</a>
+              <div class="box">
+                <ul class="sub">
+                  <li data-menu="privacy"><a href="#">개인정보 처리방침</a></li>
+                  <li data-menu="legal"><a href="#">법적고지</a></li>
+                  <li data-menu="billing-system"><a href="#">빌링시스템</a>
+                    <ul>
+                      <li><a href="#">통신서비스 이용약관</a></li>
+                      <li><a href="#">통신서비스 개인정보처리방침</a></li>
+                    </ul>
+                  </li>
+                  <li data-menu="sitemap"><a href="#">사이트맵</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div class="util-area mobile">
+            <div class="nav-update mobile">
+              <a href="#">내비케이션<br />업데이트</a>
+            </div>
+            <div class="social mobile">
+              <a href="#" class="btn round" title="현대오토에버 공식 네이버 블로그 새창열기"></a>
+              <a href="#" class="btn round"><i class="xi-facebook"><span>현대오토에버 공식 페이스북 새창열기</span></i></a>
+              <a href="#" class="btn round"><i class="xi-linkedin"><span>현대오토에버 공식 링크드인 새창열기</span></i></a>
+            </div>
+          </div>
+        </nav>
+        <div id="util-area">
+          <div class="lang">
+            <a href="#" class="lang-btn" alt="사이트 현재 언어 선택">KOR</a>
+            <ul class="lang-menu">
+              <li data-menu="kor"><a href="#">KOR</a></li>
+              <li data-menu="eng"><a href="#">ENG</a></li>
+            </ul>
+          </div>
+          <div class="search-btn"><a class="popup-btn" href="#">통합검색 바로가기</a></div>
+          <div class="menu-btn"><a class="popup-btn" href="#">전체 메뉴 보기</a></div>
+        </div>
+      </div>
+    </header>
+    <div id="sticky-menu">
+      <div class="nav-update">
+        <a href="#"><span>내비게이션 업데이트</span></a>
+      </div>
+      <div class="scrollToTop">
+        <a href="#main" alt="상단으로 이동">TOP</a>
+      </div>
+    </div>
+
+    <!-- 전체 메뉴 start -->
+    <div id="all-menu" title="전체 메뉴창">
+      <div class="box">
+        <a href="#" class="close">창 닫기</a>
+        <div class="lang">
+          <ul id="choose-lang">
+            <li><a href="#">KOR</a></li>
+            <li><a href="#">ENG</a></li>
+          </ul>
+        </div>
+        <div class="menu-list">
+          <ul>
+            <li data-menu="business">
+              <a href="#">BUSINESS AREA</a>
+              <ul>
+                <li data-menu="vehicle"><a href="#">Vehicle IT</a>
+                  <ul>
+                    <li><a href="#">차량 SW 플랫폼</a></li>
+                    <li><a href="#">SW 개발 플랫폼</a></li>
+                    <li><a href="#">차량 연동 서비스</a></li>
+                    <li><a href="#">OTA</a></li>
+                    <li><a href="#">내비게이션</a></li>
+                    <li><a href="#">정밀지도</a></li>
+                  </ul>
+                </li>
+                <li data-menu="dt"><a href="#">DT Services</a>
+                  <ul>
+                    <li><a href="#">스마트 팩토리</a></li>
+                    <li><a href="#">모빌리티 서비스</a></li>
+                    <li><a href="#">스마트 시티</a></li>
+                    <li><a href="#">앤터프라이즈 IT</a></li>
+                  </ul>
+                </li>
+                <li data-menu="core"><a href="#">Core Technology</a>
+                  <ul>
+                    <li><a href="#">카클라우드</a></li>
+                    <li><a href="#">빅데이터</a></li>
+                    <li><a href="#">인공지능</a></li>
+                    <li><a href="#">보안</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li data-menu="about">
+              <a href="#">ABOUT US</a>
+              <ul>
+                <li data-menu="company"><a href="#">회사소개</a>
+                  <ul>
+                    <li><a href="#">기업소개</a></li>
+                    <li><a href="#">CEO</a></li>
+                    <li><a href="#">연혁</a></li>
+                  </ul>
+                </li>
+                <li data-menu="workplace"><a href="#">사업장</a>
+                  <ul>
+                    <li><a href="#">국내 사업장</a></li>
+                    <li><a href="#">해외 사업장</a></li>
+                  </ul>
+                </li>
+                <li data-menu="pr"><a href="#">PR 센터</a>
+                  <ul>
+                    <li><a href="#">뉴스</a></li>
+                    <li><a href="#">블로그</a></li>
+                    <li><a href="#">뉴스레터 구독</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li data-menu="ir">
+              <a href="#">IR</a>
+              <ul>
+                <li data-menu="summary"><a href="#">개요</a></li>
+                <li data-menu="management-info"><a href="#">경영정보</a>
+                  <ul>
+                    <li><a href="#">기업지배구조헌장</a></li>
+                    <li><a href="#">이사회</a></li>
+                    <li><a href="#">감사기구</a></li>
+                    <li><a href="#">정관</a></li>
+                  </ul>
+                </li>
+                <li data-menu="finance-info"><a href="#">재무정보</a>
+                  <ul>
+                    <li><a href="#">재무상태표</a></li>
+                    <li><a href="#">손익계산서</a></li>
+                    <li><a href="#">감사/사업/영업 보고서</a></li>
+                    <li><a href="#">신용등급</a></li>
+                  </ul>
+                </li>
+                <li data-menu="stocks-info"><a href="#">주가정보</a>
+                  <ul>
+                    <li><a href="#">실시간 주가정보</a></li>
+                    <li><a href="#">주식 및 배당현황</a></li>
+                    <li><a href="#">주주현황</a></li>
+                  </ul>
+                </li>
+                <li data-menu="ir-info"><a href="#">IR 정보</a>
+                  <ul>
+                    <li><a href="#">IR 일정</a></li>
+                    <li><a href="#">경영실적발표</a></li>
+                    <li><a href="#">증권사리포트</a></li>
+                    <li><a href="#">IR 뉴스</a></li>
+                    <li><a href="#">IR 문의</a></li>
+                  </ul>
+                </li>
+                <li data-menu="public-notice"><a href="#">공시정보</a>
+                  <ul>
+                    <li><a href="#">공시</a></li>
+                    <li><a href="#">전자공고</a></li>
+                    <li><a href="#">공시정보관리규졍</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li data-menu="sustainability">
+              <a href="#">SUSTAINABILITY</a>
+              <ul>
+                <li data-menu="together"><a href="#">동반성장</a>
+                  <ul>
+                    <li><a href="#">동반성장 개요</a></li>
+                    <li><a href="#">공정한 거래환경</a></li>
+                    <li><a href="#">협력사 경쟁력 강화지원</a></li>
+                    <li><a href="#">동반성장 환경 조성</a></li>
+                    <li><a href="#">협력사 행동규범</a></li>
+                  </ul>
+                </li>
+                <li data-menu="fair-trade"><a href="#">공정거래</a>
+                  <ul>
+                    <li><a href="#">최고 경영자 의지 선포문</a></li>
+                    <li><a href="#">자율준수 프로그램 운영현황</a></li>
+                    <li><a href="#">Compliance 관련 활동</a></li>
+                    <li><a href="#">불공정거래 행위 제보</a></li>
+                  </ul>
+                </li>
+                <li data-menu="ethics"><a href="#">윤리 · 인권헌장</a>
+                  <ul>
+                    <li><a href="#">윤리헌장</a></li>
+                    <li><a href="#">인권헌장</a></li>
+                  </ul>
+                </li>
+                <li data-menu="social-contribution"><a href="#">사회공헌</a>
+                  <ul>
+                    <li><a href="#">사회공헌 소개</a></li>
+                    <li><a href="#">사회공헌 활동</a></li>
+                  </ul>
+                </li>
+                <li data-menu="sustainable-management"><a href="#">지속가능경영</a>
+                  <ul>
+                    <li><a href="#">지속가능경영</a></li>
+                    <li><a href="#">환경경영</a></li>
+                    <li><a href="#">안전보건경영</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li data-menu="careers">
+              <a href="#">CAREERS</a>
+              <ul>
+                <li data-menu="talent"><a href="#">인재상</a></li>
+                <li data-menu="hr-system"><a href="#">인사제도</a></li>
+                <li data-menu="job-intro"><a href="#">직무소개</a></li>
+                <li data-menu="recruit"><a href="#">지원하기</a></li>
+              </ul>
+            </li>
+            <li data-menu="utility">
+              <a href="#">UTILITY</a>
+              <ul>
+                <li data-menu="privacy"><a href="#">개인정보 처리방침</a></li>
+                <li data-menu="legal"><a href="#">법적고지</a></li>
+                <li data-menu="billing-system"><a href="#">빌링시스템</a>
+                  <ul>
+                    <li><a href="#">통신서비스 이용약관</a></li>
+                    <li><a href="#">통신서비스 개인정보처리방침</a></li>
+                  </ul>
+                </li>
+                <li data-menu="sitemap"><a href="#">사이트맵</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-update">
+          <a href="#">내비케이션<br />업데이트</a>
+        </div>
+        <div class="social">
+          <a href="#" class="btn round" title="현대오토에버 공식 네이버 블로그 새창열기"></a>
+          <a href="#" class="btn round"><i class="xi-facebook"><span>현대오토에버 공식 페이스북 새창열기</span></i></a>
+          <a href="#" class="btn round"><i class="xi-linkedin"><span>현대오토에버 공식 링크드인 새창열기</span></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- 전체 메뉴 end -->
+
+    <!-- 통합검색창 start -->
+    <div class="layer-mask"></div>
+    <div id="search-popup" class="layer-popup" title="검색 팝업창">
+      <a href="#" class="close">팝업창 닫기</a>
+      <div class="box">
+        <em>찾으시는 내용이 있으신가요?</em>
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="검색어를 입력해주세요" />
+          <label for="search-input">검색하기</label>
+        </div>
+        <div class="recommend">
+          <p>추천 검색어</p>
+          <ul class="tags">
+            <li><a href="#">#모빌리티</a></li>
+            <li><a href="#">#빅데이터</a></li>
+            <li><a href="#">#인공지능</a></li>
+            <li><a href="#">#소프트웨어</a></li>
+            <li><a href="#">#클라우드</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 통합검색창 end -->
+
+    <main id="main">
+      <section id="main-visual">
+        <div class="box">
+          <ul class="slide">
+            <li class="on">
+              <video muted playsinline preload="auto" src="img/main-visual-bg-01.mp4" alt=""></video>
+              <div class="text-area">
+                <p>모빌리티 혁신과<br />미래를 선도하는 기업</p>
+                <p>현댕오통에버는 4차 산업혁명 미래에 맞춰 패러다임의 변화를 선도합니다.</p>
+                <a href="#" class="btn">자세히 보러가기</a>
+              </div>
+            </li>
+            <li class="img">
+              <img src="img/main-visual-bg-02.jpeg" alt="" />
+              <div class="text-area">
+                <p>현대오토에버, 2021년<br />지속가능경영보고서 발간</p>
+                <p>현대오토에버는 지속가능한 경영활동을 위해 ESG 3대 목표 및 5대 전략을 수립하여 이행하고 있습니다.<br />현대오토에버의 다양한 ESG 추진 노력을 지속가능경영보고서를 통해 확인 바랍니다.</p>
+                <a href="#" class="btn">자세히 보러가기</a>
+              </div>
+            </li>
+            <li class="img">
+              <img src="img/main-visual-bg-03.jpeg" alt="" />
+              <div class="text-area">
+                <p>현대오토에버 챙용정보</p>
+                <ul class="recruit-list">
+                  <li><a href="#">신입<em>1</em></a></li>
+                  <li><a href="#">경력<em>18</em></a></li>
+                  <li><a href="#">전체<em>19</em></a></li>
+                </ul>
+                <a href="#" class="btn">채용공고 전체 보기</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="controller">
+          <ul class="indicator">
+            <li class="on"><a href="#">1번 슬라이드</a></li>
+            <li><a href="#">2번 슬라이드</a></li>
+            <li><a href="#">3번 슬라이드</a></li>
+          </ul>
+          <a href="#" class="play">
+            <i class="xi-play"><span>타이머 시작</span></i>
+            <i class="xi-pause"><span>타이머 정지</span></i>
+          </a>
+        </div>
+        <p class="control">
+          <a href="#" class="prev"><i class="xi-angle-left-thin"><span>이전</span></i></a>
+          <a href="#" class="next"><i class="xi-angle-right-thin"><span>다음</span></i></a>
+        </p>
+        <span class="bar"></span>
+        <div class="circle pc">Scroll Down</div>
+      </section>
+      <!-- main-visual end -->
+      <section id="vision-area" class="no-padding">
+        <div class="title">
+          <h3>현대오토에버가 모빌리티의 꿈을<br />현실로 이끌어 냅니다.</h3>
+          <p>혁신과 융합으로 잇는 모빌리팅의 오늘과 내일 현대오토에버가 만들어가는 모빌리티 세상입니다.</p>
+        </div>
+        <div class="video-bg fixed">
+          <video muted autoplay src="img/vision-area-bg.mp4"></video>
+        </div>
+        <div class="vision-inner">
+          <h3>MOBILITY<br />CONVERGENCE</h3>
+          <div class="box">
+            <h4>BUSINESS AREA</h4>
+            <div class="scroll-content">
+              <p>우리는 질문에 대한 답을 찾는 집단입니다. 이동의 자유를 향한 인간의 오랜 노력, 데이터의 연결과 융합으로 만들어 낼 가치, 지구의 지속가능성을 실현할 모빌리티 생태계. 글로벌 최고 역량을 갖춘 소프트웨어 전문가들이 모여 모빌리티를 향한 인류의 오랜 고민에 대한 답을 찾아갑니다.</p>
+              <ul>
+                <li><a href="#">
+                  <img src="img/main-parallax-01.jpg" alt="Vehicle IT" />
+                  <em>Vehicle IT</em>
+                  <p>자율주행 자동차, UAM, 로봇 등 미래 모빌리티의 형태는 다양합니다. 현대오토에버는 전 영역의 모빌리티에 적용 가능한 글로벌 표준 소프트웨어와 통합 OTA, 자율주행 정밀 지도, 고성능 업데이트 등 차량 소프트웨어 기술로 차세대 모빌리티 소프트웨어 산업을 경쟁력 있게 이끌어가고 있습니다.</p>
+                </a></li>
+                <li><a href="#">
+                  <img src="img/main-parallax-02.jpg" alt="Vehicle IT" />
+                  <em>DT Services</em>
+                  <p>제조 산업의 패러다임은 제조 혁신 플랫폼으로 빠르게 진화하고 있습니다. 현대오토에버는 디지털 기반의 지능형 제조 플랫폼인 스마트 팩토리와 지능형 교통 소프트웨어 인프라인 스마트 X 플랫폼을 통해 제조와 도시 인프라를 하나로 연결하는 모빌리티 생태계를 만들어 가고 있습니다.</p>
+                </a></li>
+                <li><a href="#">
+                  <img src="img/main-parallax-03.jpg" alt="Vehicle IT" />
+                  <em>Core Technology</em>
+                  <p>모빌리티 생산부터 이동까지의 수많은 접점에서는 실시간 방대한 데이터가 발생합니다. 현대오토에버는 모빌리티 밸류체인의 전 과정에서 발생하는 각종 데이터를 분석하여 고객의 마음을 읽고, 이를 반영할 수 있는 비즈니스 맞춤형 데이터를 제공함으로서 고객사의 비즈니스 경쟁력을 강화할 최상의 가치를 제공하고 있습니다.</p>
+                </a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div class="dummy"></div> -->
+        </div>
+      </section>
+
+      <section id="news-area">
+        <h3>News</h3>
+        <ul class="tile">
+          <li><a href="#">
+            <p>2022.03.04</p>
+            <p class="title">데이터센터 에너지 효율성 개선으로 우수기관 선정</p>
+            <p>현대오토에버(대표 서정식)가 한국에너지공단이 주관한 '2021년 에너지진단 개선이행 우수기관 공모'에서 우수사업장으로 선정되어 이사장상을 수상하였습니다. 한국에너지공단이 주관하는 '에너지진단 개선이행 우수기관 공모'는 에너지진단의 품질향상과 개선이행투자 동기부여를 위해 매년 우수기관을 선정해 시상하고 있습니다.</p>
+            <p class="more">more</p>
+          </a></li>
+          <li><a href="#">
+            <p>2022.02.22</p>
+            <p class="title">초등학교 입학 임직원 자녀에 선물 전달</p>
+            <p>현대오토에버(대표 서정식)는 올해 초등학교 입학을 앞둔 임직원 자녀 160명에게 책가방과 학용품 세트, 대표이사 축하 카드를 전달했다고 22일 밝혔습니다.</p>
+            <p class="more">more</p>
+          </a></li>
+          <li><a href="#">
+            <p>2022.02.17</p>
+            <p class="title">배리어프리 앱 개발 콘테스트 통해 9개 취약계층 편의 앱 출시</p>
+            <p>현대오토에버(대표 서정식)가 지난 16일 대학(원)생들의 아이디어와 참여로 이루어지는 배리어프리 앱 개발 콘테스트 최종 앱 제작하는 사회공헌 프로그램으로, 참여 대학(원)생들의 참신한 아이디어에 현대오토에버 ICT 전문가 멘토링, 전문 앱 개발 교육 등을 통해 최종 앱을 출시합니다. 2021년 4월부터 대학생 98개팀이 참여하여 10개월동안 열심히 앱을 제작했으며, 그 결과 올해 최종 9개의 앱이 구현되었습니다.</p>
+            <p class="more">more</p>
+          </a></li>
+        </ul>
+      </section>
+      
+      <section id="ir-area">
+        <h3 class="ir-hidden">현재 IR 상태 개요</h3>
+        <div class="box">
+          <div class="box-left">
+            <ul>
+              <li>IR</li>
+              <li class="down">120,500</li>
+            </ul>
+          </div>
+          <div class="box-right">
+            <ul>
+              <li>전월대비</li>
+              <li class="down">2,500</li>
+            </ul>
+            <ul>
+              <li>등락률</li>
+              <li class="minus">2.03%</li>
+            </ul>
+            <ul>
+              <li>시가총액</li>
+              <li>33,046 억원</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="blog-area">
+        <h3>BLOG</h3>
+        <ul class="tile">
+          <li><a href="#">
+            <p><img src="img/blog-01.jpg" alt="고도자율주행의 핵심, 정밀측위기술을 아시나요?" /></p>
+            <p class="title">고도자율주행의 핵심, 정밀측위기술을 아시나요?</p>
+            <p class="more">more</p>
+          </a></li>
+          <li><a href="#">
+            <p><img src="img/blog-02.jpg" alt="자율주행 레벨3를 완성할 현대차 ADAS 표준 SW 플랫폼" /></p>
+            <p class="title">자율주행 레벨3를 완성할 현대차 ADAS 표준 SW 플랫폼</p>
+            <p class="more">more</p>
+          </a></li>
+          <li><a href="#">
+            <p><img src="img/blog-03.jpg" alt="서비스형 소프트웨어가 촉발한 엔터프라이즈 IT 구독서비스" /></p>
+            <p class="title">서비스형 소프트웨어가 촉발한 엔터프라이즈 IT 구독서비스</p>
+            <p class="more">more</p>
+          </a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="box">
+        <h3>POSITIVE CHANGES<br />ARE COMING</h3>
+        <div class="content">
+          <div class="service-link">
+            <ul>
+              <li><a href="#">내비게이션 업데이트</a></li>
+              <li><a href="#">뉴스레터 구독</a></li>
+              <li><a href="#">통합검색 서비스</a></li>
+            </ul>
+          </div>
+          <div class="quick-link">
+            <ul>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">법적고지</a></li>
+              <li><a href="#">구매시스템</a></li>
+              <li><a href="#">익명신고센터</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">통신서비스 이용약관</a></li>
+              <li><a href="#">방문예약시스템</a></li>
+              <li><a href="#">사이트맵</a></li>
+            </ul>
+          </div>
+          <div class="contact">
+            <div class="fam-site">
+              <a class="popup-btn" href="#">FAMILY SITE 바로가기</a>
+              <div class="layer-mask"></div>
+              <div id="fam-site-popup" class="layer-popup">
+                <a href="#" class="close">팝업창 닫기</a>
+                <div class="box">
+                  <h3>FAMILY SITE</h3>
+                  <div class="list">
+                    <div class="scroll-bar"></div>
+                    <ul class="scrollable">
+                      <li>현대자동차그룹
+                        <ul>
+                          <li><a href="#">현대자동차그룹</a></li>
+                          <li><a href="#">현대차 정몽구 재단</a></li>
+                          <li><a href="#">현대차 미소금융재단</a></li>
+                          <li><a href="#">현대·기아차 동반성장</a></li>
+                          <li><a href="#">글로벌경영연구소</a></li>
+                          <li><a href="#">해피무브 글로벌 청년봉사단</a></li>
+                        </ul>
+                      </li>
+                      <li>완성차
+                        <ul>
+                          <li><a href="#">현대자동차</a></li>
+                          <li><a href="#">기아자동차</a></li>
+                          <li><a href="#">제네시스</a></li>
+                        </ul>
+                      </li>
+                      <li>철강
+                        <ul>
+                          <li><a href="#">현대제철</a></li>
+                          <li><a href="#">현대비앤지스틸</a></li>
+                          <li><a href="#">현대종합특수강</a></li>
+                        </ul>
+                      </li>
+                      <li>건설
+                        <ul>
+                          <li><a href="#">현대건설</a></li>
+                          <li><a href="#">현대엔지니어링</a></li>
+                          <li><a href="#">현대스틸산업</a></li>
+                          <li><a href="#">현대종합설계</a></li>
+                          <li><a href="#">현대도시개발</a></li>
+                        </ul>
+                      </li>
+                      <li>부품
+                        <ul>
+                          <li><a href="#">현대모비스</a></li>
+                          <li><a href="#">현대트랜시스</a></li>
+                          <li><a href="#">현대위아</a></li>
+                          <li><a href="#">현대케피코</a></li>
+                          <li><a href="#">현대엠시트</a></li>
+                          <li><a href="#">현대아이에이치엘</a></li>
+                          <li><a href="#">현대파텍스</a></li>
+                        </ul>
+                      </li>
+                      <li>금융
+                        <ul>
+                          <li><a href="#">현대캐피탈</a></li>
+                          <li><a href="#">현대카드</a></li>
+                          <li><a href="#">현대커머셜</a></li>
+                          <li><a href="#">현대차증권</a></li>
+                          <li><a href="#">현대라이프</a></li>
+                        </ul>
+                      </li>
+                      <li>기타
+                        <ul>
+                          <li><a href="#">현대글로비스</a></li>
+                          <li><a href="#">현대로템</a></li>
+                          <li><a href="#">이노션 월드와이드</a></li>
+                          <li><a href="#">해비치호텔&리조트</a></li>
+                          <li><a href="#">현대엔지비</a></li>
+                          <li><a href="#">현대서산농장</a></li>
+                          <li><a href="#">지아이티</a></li>
+                          <li><a href="#">지마린서비스</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <address>
+              <p>Tel. 02-6296-6000</p>
+              <p>COPYRIGHT 2021<br />HYUNDAI AUTOEVER CORP.<br />ALL RIGHTS RESERVED.</p>
+            </address>
+            <div class="social">
+              <a href="#" class="btn round" title="현대오토에버 공식 네이버 블로그 새창열기"></a>
+              <a href="#" class="btn round"><i class="xi-facebook"><span>현대오토에버 공식 페이스북 새창열기</span></i></a>
+              <a href="#" class="btn round"><i class="xi-linkedin"><span>현대오토에버 공식 링크드인 새창열기</span></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+  'use strict'
+
+  //image-slide
+  var numSlide = $('#main-visual ul.slide > li').length;
+  var slideNow = 0;
+  var slidePrev = 0;
+  var slideNext = 0;
+  var slideFirst = 1;
+  var timerId = '';
+  var timerSpeed = 10000;
+  var isTimerOn = true;
+  var myVideo = $('video').get(0);
+  //vision-area
+  var $video = $('#vision-area > div.video-bg');
+  var $selector = $('#vision-area > div.vision-inner');
+  var offSetTop = $selector.offset().top;
+  var height = $selector.outerHeight(true);
+  var start = offSetTop - $(window).height();
+  var end = offSetTop + $selector.outerHeight(true);
+
+  $(window).on('scroll', function() {
+    setScaleAmt();
+    setHeaderDesign();
+  })
+
+  $('#main-visual ul.slide > li').each(function(i) {
+    $(this).css({'left': (i * 100) + '%', 'display': 'block'});
+  })
+  if (isTimerOn === true) {
+    $('#main-visual .control a.play').addClass('on');
+  } else {
+    $('#main-visual .control a.play').removeClass('on');
+  }
+
+  showSlide(slideFirst);
+  checkWindowWidth();
+
+  $(window).on('resize', function() {
+    checkWindowWidth();
+    var windowWidth = $(window).width();
+    offSetTop = $selector.offset().top;
+    // height = $selector.outerHeight(true);
+    // start = offSetTop - $(window).height();
+    // end = $selector.offset().top + $selector.outerHeight(true);
+    // console.log(offSetTop, height);
+  });
+
+  $(document).ready(function() {
+    if (slideFirst === 1) {
+      setTimeout(function() {myVideo.play();}, 500)
+    }
+    setTimeout(function() {
+      $('#sticky-menu').addClass('small');
+    }, 2000)
+  });
+
+  $('#main-visual ul.indicator li a').on('click', function() {
+    var index = $('#main-visual ul.indicator li').index($(this).parent());
+    // console.log(index);
+    showSlide(index + 1);
+  })
+
+  $('#main-visual .control a.prev').on('click', function() {
+    showSlide(slidePrev);
+  });
+
+  $('#main-visual .control a.next').on('click', function() {
+    showSlide(slideNext);
+  });
+
+  $('#main-visual a.play').on('click', function() {
+    if (isTimerOn === true) {
+      stopTimer();
+    } else {
+      startTimer();
+    }
+  });
+
+  function setHeaderDesign() {
+    var scrollAmt = $(document).scrollTop();
+    if (scrollAmt > 150) {
+      $('#header').addClass('white');
+      $('#sticky-menu').addClass('scrolled')
+    } else {
+      $('#header').removeClass('white');
+      $('#sticky-menu').removeClass('scrolled')
+    }
+  }
+
+  $('#header').on('mouseleave', function() {
+    $('#gnb > ul > li > a').removeClass('on');
+    var scrollAmt = $(document).scrollTop();
+    if (scrollAmt <= 150) {
+      $('#header').removeClass('white');
+    } 
+  });
+
+  function checkWindowWidth() {
+    var width = $(window).width();
+    console.log(width);
+    if (width <= 767) {
+      if ($('#all-menu').hasClass('on') === true) {
+        setClass();
+      }
+      $('#header div.menu-btn > a.popup-btn').on('click', function() {
+        setClass();
+      })
+    }
+    function setClass() {
+      $('#gnb').addClass('open');
+      $('body').addClass('no-scroll');
+      $('#sticky-menu').addClass('hide');
+    }
+  }
+
+  function startTimer() {
+    if (slideNow === 1) {
+      myVideo.play();
+    }
+    timerId = setTimeout(function() {showSlide(slideNext);}, timerSpeed);
+    $('#main-visual a.play').addClass('on');
+    $('#main-visual span.bar').css({'animation-duration': timerSpeed + 'ms'}).addClass('on');
+    isTimerOn = true;
+  }
+
+  function stopTimer() {
+    if (slideNow === 1) {
+      resetVid();
+    }
+    clearTimeout(timerId);
+    $('#main-visual a.play').removeClass('on');
+    $('#main-visual span.bar').removeClass('on');
+    isTimerOn = false;
+  }
+
+  function resetVid() {
+    myVideo.pause();
+    myVideo.currentTime = 0;
+  }
+
+  function resetTimer() {
+    clearTimeout(timerId);
+    $('#main-visual span.bar').removeClass('on');
+    $('#main-visual a.play').removeClass('on');
+    if (isTimerOn === true) {
+      timerId = setTimeout(function() {showSlide(slideNext);}, timerSpeed);
+      setTimeout(function() {$('#main-visual span.bar').css({'animation-duration': (timerSpeed - 50) + 'ms'}).addClass('on');}, 50);
+      $('#main-visual a.play').addClass('on');
+    }
+  }
+
+  function showSlide(n) {
+    resetTimer();
+    $('#main-visual ul.slide').css({'transition': 'left 0.3s', 'left': (-(n - 1) * 100) + '%'});
+    $('#main-visual ul.indicator li').removeClass('on');
+    $('#main-visual ul.indicator li:eq(' + (n - 1) + ')').addClass('on');
+    slideNow = n;
+    slidePrev = (n === 1) ? numSlide : (n - 1);
+    slideNext = (n === numSlide) ? 1 : (n + 1);
+    if (n === 1) {
+      myVideo.play();
+      $('#main-visual a.play').addClass('on');
+    } else {
+      resetVid();
+      // $('#main-visual ul.slide > li.img')
+    }
+  }
+
+  function setScaleAmt() {
+    var scrollAmt = $(document).scrollTop();
+    var scaleAmtTop = ((scrollAmt - start) * 100) / (offSetTop - start);
+    var scaleAmtTopEnd = (scrollAmt - (end - 500) * 100) / (start - (end - 500));
+    var scaleAmtWidth = (((scrollAmt - start) * 50) / ((start + height) - start)) + 90;
+
+    console.log(scrollAmt + ' | ' + start + ' ~ ' + end);
+    console.log(scaleAmtTopEnd);
+
+    if (scrollAmt < start) {
+      $video.css({'width': '90%', 'top': '100%'});
+      console.log('A');
+    } else if (scrollAmt < offSetTop) {
+      console.log('B');
+      $video.css({'width': (scaleAmtWidth) + '%', 'top': (100 - scaleAmtTop) + '%'});
+    } else if (scrollAmt < end - 500) {
+      console.log('C');
+      $video.css({'width': '100%', 'top': '0'});
+    } else if (scrollAmt > end - 500) {
+      console.log('D');
+      $video.css({'top': (100 - scaleAmtTopEnd) + '%'});
+      // $video.css({'position': 'relative', 'width': '100%'});
+    } else {
+      // $video.css({'width': '100%', 'top': '-100%'});
+      // console.log('else')
+    }
+  }
+
+  </script>
+</body>
+</html>
