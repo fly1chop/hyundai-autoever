@@ -289,9 +289,9 @@
             <li data-menu="about">
               <a href="#">ABOUT US</a>
               <ul>
-                <li data-menu="company"><a href="#">회사소개</a>
+                <li data-menu="company"><a href="page/about/company-intro.html">회사소개</a>
                   <ul>
-                    <li><a href="#">기업소개</a></li>
+                    <li><a href="page/about/company-intro.html">기업소개</a></li>
                     <li><a href="#">CEO</a></li>
                     <li><a href="#">연혁</a></li>
                   </ul>
@@ -758,7 +758,7 @@
   var offSetTop = $selector.offset().top;
   var height = $selector.outerHeight(true);
   var start = offSetTop - $(window).height();
-  var end = offSetTop + $selector.outerHeight(true);
+  var end = 0;
 
   $(window).on('scroll', function() {
     setScaleAmt();
@@ -911,8 +911,22 @@
   function setScaleAmt() {
     var scrollAmt = $(document).scrollTop();
     var scaleAmtTop = ((scrollAmt - start) * 100) / (offSetTop - start);
-    var scaleAmtTopEnd = (scrollAmt - (end - 500) * 100) / (start - (end - 500));
+    // var findBox = $('.vision-inner .scroll-content').innerHeight() + 200;
+    var newOffsetTop = $('#news-area').offset().top - $(window).height();
+    console.log(newOffsetTop);
+    // end = offSetTop + findBox;
+    end = newOffsetTop;
+    var scaleAmtTopEnd = (scrollAmt - end) * 100 / ((end + 700) - end);
     var scaleAmtWidth = (((scrollAmt - start) * 50) / ((start + height) - start)) + 90;
+    var windowHeight = 0;
+
+    // $(window).on('resize', function() {
+    //   windowHeight = $(window).height();
+    //   newOffsetTop = $('#news-area').offset().top - windowHeight;
+    //   end = newOffsetTop;
+    // });
+
+
 
     console.log(scrollAmt + ' | ' + start + ' ~ ' + end);
     console.log(scaleAmtTopEnd);
@@ -923,12 +937,12 @@
     } else if (scrollAmt < offSetTop) {
       console.log('B');
       $video.css({'width': (scaleAmtWidth) + '%', 'top': (100 - scaleAmtTop) + '%'});
-    } else if (scrollAmt < end - 500) {
+    } else if (scrollAmt < end) {
       console.log('C');
       $video.css({'width': '100%', 'top': '0'});
-    } else if (scrollAmt > end - 500) {
+    } else if (scrollAmt > end) {
       console.log('D');
-      $video.css({'top': (100 - scaleAmtTopEnd) + '%'});
+      $video.css({'width': '100%', 'top': (-scaleAmtTopEnd) + '%'});
       // $video.css({'position': 'relative', 'width': '100%'});
     } else {
       // $video.css({'width': '100%', 'top': '-100%'});

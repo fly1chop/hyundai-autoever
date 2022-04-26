@@ -221,10 +221,10 @@ div.list > div.scroll-bar::before {content: ''; display: block; position: absolu
 #vision-area div.video-bg::after {content: ''; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);}
 #vision-area div.video-bg > video {width: 100%; object-fit: cover;}
 #vision-area div.video-bg {position: fixed; width: 90%; height: 100vh; left: 50%; top: 100%; transform: translateX(-50%); z-index: -1; overflow: hidden; margin: 0 auto;}
-div.vision-inner {color: #fff; padding-top: 200px;}
+div.vision-inner {color: #fff; padding-top: 200px; max-width: 1400px; margin: 0 auto;}
 div.vision-inner > h3 {font-size: 100px; margin-bottom: 250px; padding-left: 30px;}
 div.vision-inner > div.box {position: relative; height: 100%; width: 100%;}
-div.vision-inner::after {content: ''; display: block; height: 200px; background: rgba(202, 31, 31, 0.1)}
+div.vision-inner::after {content: ''; display: block; height: 200px;}
 div.vision-inner h4 {font-size: 40px; display: block; width: 200px; position: sticky; left: 30px; top: 50%; transform: translateY(-50%); float: left;}
 div.vision-inner div.scroll-content {padding-left: 100px; height: 100%; margin-right: 50px; overflow: hidden;}
 div.vision-inner div.scroll-content > p {margin-bottom: 150px;}
@@ -386,9 +386,9 @@ div.social a:nth-child(1):hover {background-image: url(../img/icon-sns-blog-gree
 div.social a:nth-child(2):hover {background-color: #3b5998; border-color: #3b5998;}
 div.social a:nth-child(3):hover {background-color: #0072b1; border-color: #0072b1;}
 
-.layer-mask {position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 5000; background-color: rgba(0, 0, 0, 0.1); display: none;}
+.layer-mask {position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 4000; background-color: rgba(0, 0, 0, 0.5); display: none;}
 .layer-mask.on {display: block;}
-.layer-popup {position: fixed; left: 50%; top: 50%; width: 100%; height: 100%; max-width: 90vw; max-height: 90vh; transform: translate(-50%, -50%); background-color: #ffffff; border: 1px solid transparent; overflow: hidden; z-index: 5000; padding: 50px 50px 25px 50px; box-sizing: border-box; border-radius: 50px; display: none;}
+.layer-popup {position: fixed; left: 50%; top: 50%; width: 100%; height: 100%; max-width: 90vw; max-height: 90vh; transform: translate(-50%, -50%); background-color: #ffffff; border: 1px solid transparent; overflow: hidden; z-index: 6000; padding: 50px 50px 25px 50px; box-sizing: border-box; border-radius: 50px; display: none;}
 .layer-popup.on {display: block;}
 .layer-popup > a.close {position: absolute; top: 30px; right: 30px; width: 40px; height: 40px; background: url(../img/icon-menu-close.png) 0 0 no-repeat; text-indent: -9999px; transition: transform 0.3s;}
 .layer-popup > a.close:hover {transform: rotate(180deg);}

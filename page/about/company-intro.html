@@ -18,7 +18,7 @@
 <body class="sub about company">
   <div id="wrapper">
     <a href="#main" id="skip-nav">본문 바로가기</a>
-    <header id="header" class="white">
+    <header id="header" class="small white">
       <div class="box">
         <h1><a href="../../index.html">
           <img src="../../img/logo.png" class="default" alt="Hyundai AutoEver" />
@@ -287,9 +287,9 @@
             <li data-menu="about">
               <a href="#">ABOUT US</a>
               <ul>
-                <li data-menu="company"><a href="#">회사소개</a>
+                <li data-menu="company"><a href="../../page/about/company-intro.html">회사소개</a>
                   <ul>
-                    <li><a href="#">기업소개</a></li>
+                    <li><a href="../../page/about/company-intro.html">기업소개</a></li>
                     <li><a href="#">CEO</a></li>
                     <li><a href="#">연혁</a></li>
                   </ul>
@@ -923,13 +923,24 @@ $('#lnb ul > li > a').on('click', function() {
 
 $(document).ready(function() {
   setActive('#intro .active');
-  setActive('#history .active', 0, false);
+  setActive('#history .active', 0, true);
+  // if (window.innerWidth > 1024) {
+  //   setActive('#history .active', 0, false);
+  // } else {
+  //   setActive('#history .active', 0, false);
+  // }
+  
 });
 
 
 $(window).on('scroll resize', function() {
   setActive('#intro .active', 150);
-  setActive('#history .active', 0, false, true);
+  if (window.innerWidth > 1024) {
+    setActive('#history .active', 0, false, true, 50, 100);
+  } else {
+    setActive('#history .active', 0, false, true, 80, 100);
+  }
+  
 })
 
 /*

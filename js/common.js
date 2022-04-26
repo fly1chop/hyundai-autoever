@@ -3,6 +3,7 @@ $(document).ready(function() {
   preventDefaultAnchor();
   setGNB();
   setPopup();
+  setScrollToTop();
   $('body.sub #sticky-menu > .nav-update').css({'display': 'none'});
 });
 
@@ -20,9 +21,18 @@ window.addEventListener('wheel', function(e) {
   }
 })
 
+function setScrollToTop() {
+  $('.scrollToTop > a').click(function(e){
+    e.preventDefault();
+    $('html').stop(true).animate({'scrollTop':'0'},500);
+    $('#header').removeClass('scrollDown');
+  });
+}
+
 function setPopup() {
   $('a.popup-btn').on('click', function() {
     $('body').addClass('no-scroll');
+    $('.layer-mask').addClass('on');
     if ($(this).parent().hasClass('search-btn') === true) {
       $('#search-popup').addClass('on');
     } else if ($(this).parent().hasClass('menu-btn') === true) {
@@ -38,6 +48,7 @@ function setPopup() {
     $('#gnb ul.gnb > li').removeClass('on');
     $('#gnb ul.gnb div.box').css({'height': '0px'});
     $('body').removeClass('no-scroll');
+    $('.layer-mask').removeClass('on');
   });
 }
 
@@ -100,10 +111,6 @@ function setGNB() {
   });
 }
 
-$('.scrollToTop > a').click(function(e){
-  e.preventDefault();
-  $('html').stop(true).animate({'scrollTop':'0'},500);
-});
 
 function setStickyMenu() {
   var scrollAmt = $(document).scrollTop();
@@ -117,7 +124,7 @@ function setStickyMenu() {
   }
 }
 
-function setActive(selector, amount, start, type) {
+function setActive(selector, amount, start, type, startValue, changeValue) {
   $(selector).each(function() {
     var $selector = $(this);
     var scrollAmt = $(document).scrollTop();
@@ -130,8 +137,10 @@ function setActive(selector, amount, start, type) {
       elTop = $selector.offset().top;
     }
     var elActivate = amount;
+    var valueChange = changeValue;
+    var valueStart = startValue;
     var activeEnd = $selector.offset().top + 1000;
-    var scaleAmt = (((scrollAmt - elTop) * 100) / (activeEnd - elTop)) + 50
+    var scaleAmt = (((scrollAmt - elTop) * valueChange) / (activeEnd - elTop)) + valueStart;
     console.log(scaleAmt);
 
     console.log(elTop + ' ~ ' + elBottom + ' : ' + scrollAmt);
