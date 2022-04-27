@@ -30,37 +30,58 @@ function setScrollToTop() {
 }
 
 function setPopup() {
-  $('a.popup-btn').on('click', function() {
+  $('a.popup-btn').on('click', function(e) {
+    // var target = e.target;
+    // var parent = target.
+    // console.log(target);
     $('body').addClass('no-scroll');
-    $('.layer-mask').addClass('on');
     if ($(this).parent().hasClass('search-btn') === true) {
       $('#search-popup').addClass('on');
+      $('.layer-mask').addClass('on');
     } else if ($(this).parent().hasClass('menu-btn') === true) {
       $('#all-menu').addClass('on');
     } else if ($(this).parent().hasClass('fam-site') === true) {
       $('#fam-site-popup').addClass('on');
+      $('.layer-mask').addClass('on');
     }
   });
   $('a.close').on('click', function() {
-    $('.layer-popup').removeClass('on');
+    if ($(this).hasClass('mobile')) {
+      $('#gnb').removeClass('open');
+      $('#gnb ul.gnb > li').removeClass('on');
+      $('#gnb ul.gnb div.box').css({'height': '0px'});
+    }
     $('#all-menu').removeClass('on');
-    $('#gnb').removeClass('open');
-    $('#gnb ul.gnb > li').removeClass('on');
-    $('#gnb ul.gnb div.box').css({'height': '0px'});
+    $('.layer-popup').removeClass('on');
     $('body').removeClass('no-scroll');
     $('.layer-mask').removeClass('on');
   });
 }
 
 function setGNB() {
+  var timerIdFocus = '';
+
   $('#gnb ul.gnb > li > a').on('mouseenter focusin', function() {
+    if ($(window).width() < 1024) return false;
+    // clearTimeout(timerIdFocus);
     $('#gnb ul.gnb > li > a').removeClass('on');
     $(this).addClass('on');
     $('#header').addClass('white');
   });
+  // $('#gnb ul.gnb > li ul.sub > li > a').on('focusin', function() {
+  //   clearTimeout(timerIdFocus);
+  //   // $('#gnb ul.gnb > li > a').removeClass('on');
+  //   // $(this).addClass('on');
+  // })
   $('#header').on('mouseleave', function() {
     $('#gnb > ul > li > a').removeClass('on');
   });
+  // $('#header').on('focusout', function() {
+  //   if ($(window).width() < 1024) return false;
+  //   timerIdFocus = setTimeout(function() {
+  //     $('#gnb > ul > li > a').removeClass('on');
+  //   }, 500);
+  // });
   
   //모바일 GNB
   $('#gnb ul.gnb > li > a').on('click', function(e) {
