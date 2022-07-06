@@ -889,47 +889,9 @@ $('#lnb ul > li > a').on('click', function() {
   }
 });
 
-// var $selector = $('#history .active');
-// var scrollAmt = $(document).scrollTop();
-// var elTop = $selector.offset().top;
-// var activeEnd = elTop + 1000;
-
-// $('#history .active').each(function() {
-//   var elTop = $(this).offset().top;
-//   console.log(this);
-// })
-
-// $(window).on('scroll', function() {
-//   scrollAmt = $(document).scrollTop();
-//   console.log(elTop + ' ~ ' + activeEnd + ' : ' + scrollAmt);
-// });
-
-// var sections = document.querySelectorAll('#history .active');
-// // console.log(sections);
-
-// for (var i = 0; i < sections.length; i++) {
-//   var windowHeight = window.innerHeight;
-//   var elTop = sections[i].getBoundingClientRect().top;
-
-//   console.log(elTop);
-// }
-
-
-// $('#history .active').each(function() {
-//   var $selector = $(this);
-//   var elTop = $selector.offset().top;
-//   console.log($selector);
-// });
-
 $(document).ready(function() {
   setActive('#intro .active');
   setActive('#history .active', 0, true);
-  // if (window.innerWidth > 1024) {
-  //   setActive('#history .active', 0, false);
-  // } else {
-  //   setActive('#history .active', 0, false);
-  // }
-  
 });
 
 
@@ -940,34 +902,7 @@ $(window).on('scroll resize', function() {
   } else {
     setActive('#history .active', 0, false, true, 80, 100);
   }
-  
 })
-
-/*
-function setActive(selector, amount, start) {
-  $(selector).each(function() {
-    var $selector = $(this);
-    var scrollAmt = $(document).scrollTop();
-    var elTop = 0;
-    var elBottom = $selector.offset().top + $selector.outerHeight();
-    var isStartBottom = start;
-    if (isStartBottom === true || isStartBottom === undefined) {
-      elTop = $selector.offset().top - $(window).height();
-    } else {
-      elTop = $selector.offset().top;
-    }
-    var elActivate = amount;
-    console.log(elTop + ' ~ ' + elBottom + ' : ' + scrollAmt);
-    console.log((elTop + elActivate));
-
-    if (scrollAmt < elTop + elActivate) {
-      $selector.removeClass('on');
-    } else {
-      $selector.addClass('on');
-    }
-  });
-}
-*/
 
 
 </script>

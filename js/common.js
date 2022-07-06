@@ -63,25 +63,17 @@ function setGNB() {
 
   $('#gnb ul.gnb > li > a').on('mouseenter focusin', function() {
     if ($(window).width() < 1024) return false;
-    // clearTimeout(timerIdFocus);
     $('#gnb ul.gnb > li > a').removeClass('on');
     $(this).addClass('on');
     $('#header').addClass('white');
   });
-  // $('#gnb ul.gnb > li ul.sub > li > a').on('focusin', function() {
-  //   clearTimeout(timerIdFocus);
-  //   // $('#gnb ul.gnb > li > a').removeClass('on');
-  //   // $(this).addClass('on');
-  // })
   $('#header').on('mouseleave', function() {
     $('#gnb > ul > li > a').removeClass('on');
   });
-  // $('#header').on('focusout', function() {
-  //   if ($(window).width() < 1024) return false;
-  //   timerIdFocus = setTimeout(function() {
-  //     $('#gnb > ul > li > a').removeClass('on');
-  //   }, 500);
-  // });
+  $('div.lang > a').on('focusin', function() {
+    if ($(window).width() < 1024) return false;
+    $('#gnb > ul > li > a').removeClass('on');                         
+  });
   
   //모바일 GNB
   $('#gnb ul.gnb > li > a').on('click', function(e) {

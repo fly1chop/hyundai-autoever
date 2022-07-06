@@ -781,10 +781,6 @@
     checkWindowWidth();
     var windowWidth = $(window).width();
     offSetTop = $selector.offset().top;
-    // height = $selector.outerHeight(true);
-    // start = offSetTop - $(window).height();
-    // end = $selector.offset().top + $selector.outerHeight(true);
-    // console.log(offSetTop, height);
   });
 
   $(document).ready(function() {
@@ -839,7 +835,7 @@
 
   function checkWindowWidth() {
     var width = $(window).width();
-    console.log(width);
+    // console.log(width);
     if (width <= 767) {
       if ($('#all-menu').hasClass('on') === true) {
         setClass();
@@ -904,49 +900,32 @@
       $('#main-visual a.play').addClass('on');
     } else {
       resetVid();
-      // $('#main-visual ul.slide > li.img')
     }
   }
 
   function setScaleAmt() {
     var scrollAmt = $(document).scrollTop();
     var scaleAmtTop = ((scrollAmt - start) * 100) / (offSetTop - start);
-    // var findBox = $('.vision-inner .scroll-content').innerHeight() + 200;
     var newOffsetTop = $('#news-area').offset().top - $(window).height();
-    console.log(newOffsetTop);
-    // end = offSetTop + findBox;
     end = newOffsetTop;
     var scaleAmtTopEnd = (scrollAmt - end) * 100 / ((end + 700) - end);
     var scaleAmtWidth = (((scrollAmt - start) * 50) / ((start + height) - start)) + 90;
     var windowHeight = 0;
 
-    // $(window).on('resize', function() {
-    //   windowHeight = $(window).height();
-    //   newOffsetTop = $('#news-area').offset().top - windowHeight;
-    //   end = newOffsetTop;
-    // });
-
-
-
-    console.log(scrollAmt + ' | ' + start + ' ~ ' + end);
-    console.log(scaleAmtTopEnd);
+    // console.log(scrollAmt + ' | ' + start + ' ~ ' + end);
 
     if (scrollAmt < start) {
       $video.css({'width': '90%', 'top': '100%'});
-      console.log('A');
+      // console.log('A');
     } else if (scrollAmt < offSetTop) {
-      console.log('B');
+      // console.log('B');
       $video.css({'width': (scaleAmtWidth) + '%', 'top': (100 - scaleAmtTop) + '%'});
     } else if (scrollAmt < end) {
-      console.log('C');
+      // console.log('C');
       $video.css({'width': '100%', 'top': '0'});
     } else if (scrollAmt > end) {
-      console.log('D');
+      // console.log('D');
       $video.css({'width': '100%', 'top': (-scaleAmtTopEnd) + '%'});
-      // $video.css({'position': 'relative', 'width': '100%'});
-    } else {
-      // $video.css({'width': '100%', 'top': '-100%'});
-      // console.log('else')
     }
   }
 
